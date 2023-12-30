@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace pryBancoDeSangre
 {
-    public partial class frmUser : Form
+    public partial class frmUser : MaterialSkin.Controls.MaterialForm
     {
         public frmUser()
         {
             InitializeComponent();
+        }
+
+        private void frmUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
