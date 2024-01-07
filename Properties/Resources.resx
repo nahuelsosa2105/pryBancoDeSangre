@@ -124,4 +124,10 @@
   <data name="LOGO pryBancoDeSangre1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO pryBancoDeSangre1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mostrar contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mostrar contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ocultar contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ocultar contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

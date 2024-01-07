@@ -21,5 +21,22 @@ namespace pryBancoDeSangre
         {
 
         }
+
+        private void btnNuevoUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbMostrar_Click(object sender, EventArgs e)
+        {
+            pbOcultar.BringToFront();
+            txtContraseña.PasswordChar = '\0';
+        }
+
+        private void pbOcultar_Click(object sender, EventArgs e)
+        {
+            pbMostrar.BringToFront();
+            txtContraseña.PasswordChar= '*';
+        }
     }
 }
