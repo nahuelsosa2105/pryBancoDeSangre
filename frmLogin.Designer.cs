@@ -30,8 +30,8 @@
         {
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtUser = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPass = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
@@ -41,7 +41,7 @@
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.Location = new System.Drawing.Point(46, 143);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -53,7 +53,7 @@
             // 
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.Location = new System.Drawing.Point(99, 214);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -61,40 +61,40 @@
             this.materialLabel2.TabIndex = 1;
             this.materialLabel2.Text = "Contraseña:";
             // 
-            // materialTextBox1
+            // txtUser
             // 
-            this.materialTextBox1.AnimateReadOnly = false;
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(249, 126);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(358, 50);
-            this.materialTextBox1.TabIndex = 2;
-            this.materialTextBox1.Text = "";
-            this.materialTextBox1.TrailingIcon = null;
+            this.txtUser.AnimateReadOnly = false;
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUser.Depth = 0;
+            this.txtUser.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUser.LeadingIcon = null;
+            this.txtUser.Location = new System.Drawing.Point(249, 126);
+            this.txtUser.MaxLength = 50;
+            this.txtUser.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtUser.Multiline = false;
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(358, 50);
+            this.txtUser.TabIndex = 2;
+            this.txtUser.Text = "";
+            this.txtUser.TrailingIcon = null;
             // 
-            // materialTextBox2
+            // txtPass
             // 
-            this.materialTextBox2.AnimateReadOnly = false;
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(249, 197);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Password = true;
-            this.materialTextBox2.Size = new System.Drawing.Size(358, 50);
-            this.materialTextBox2.TabIndex = 3;
-            this.materialTextBox2.Text = "";
-            this.materialTextBox2.TrailingIcon = null;
+            this.txtPass.AnimateReadOnly = false;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Depth = 0;
+            this.txtPass.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPass.LeadingIcon = null;
+            this.txtPass.Location = new System.Drawing.Point(249, 197);
+            this.txtPass.MaxLength = 50;
+            this.txtPass.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPass.Multiline = false;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Password = true;
+            this.txtPass.Size = new System.Drawing.Size(358, 50);
+            this.txtPass.TabIndex = 3;
+            this.txtPass.Text = "";
+            this.txtPass.TrailingIcon = null;
             // 
             // materialButton1
             // 
@@ -116,6 +116,7 @@
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // materialButton2
             // 
@@ -167,8 +168,8 @@
             this.Controls.Add(this.materialButton3);
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
-            this.Controls.Add(this.materialTextBox2);
-            this.Controls.Add(this.materialTextBox1);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.MaximizeBox = false;
@@ -185,8 +186,8 @@
 
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialTextBox txtUser;
+        private MaterialSkin.Controls.MaterialTextBox txtPass;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialButton materialButton3;

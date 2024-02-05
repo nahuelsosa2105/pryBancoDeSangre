@@ -21,5 +21,16 @@ namespace pryBancoDeSangre
         {
 
         }
+
+        string user;
+        string pass;
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            user = txtUser.Text;
+            pass = txtPass.Text;
+
+
+
+        }
     }
 }
