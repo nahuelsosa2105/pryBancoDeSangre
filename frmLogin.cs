@@ -12,6 +12,8 @@ namespace pryBancoDeSangre
 {
     public partial class frmLogin : MaterialSkin.Controls.MaterialForm
     {
+        clsBaseDeDatosUser objBaseDeDatos;
+
         public frmLogin()
         {
             InitializeComponent();
@@ -19,17 +21,21 @@ namespace pryBancoDeSangre
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            objBaseDeDatos = new clsBaseDeDatosUser();
+            objBaseDeDatos.ConectarBD();
+            lblEstadoDeConexion.Text = objBaseDeDatos.estadoConexion.ToString();
+
 
         }
 
-        string user;
-        string pass;
+        public static string user;
+        public static string pass;
         private void materialButton1_Click(object sender, EventArgs e)
         {
             user = txtUser.Text;
             pass = txtPass.Text;
 
-
+            clsBaseDeDatosUser
 
         }
     }

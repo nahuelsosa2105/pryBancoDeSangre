@@ -32,9 +32,12 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.txtUser = new MaterialSkin.Controls.MaterialTextBox();
             this.txtPass = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.btnIniciarSesion = new MaterialSkin.Controls.MaterialButton();
+            this.btnOlvidar = new MaterialSkin.Controls.MaterialButton();
+            this.btnNuevoUser = new MaterialSkin.Controls.MaterialButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblEstadoDeConexion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -96,78 +99,95 @@
             this.txtPass.Text = "";
             this.txtPass.TrailingIcon = null;
             // 
-            // materialButton1
+            // btnIniciarSesion
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(86, 284);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(511, 36);
-            this.materialButton1.TabIndex = 4;
-            this.materialButton1.Text = "Iniciar sesión";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            this.btnIniciarSesion.AutoSize = false;
+            this.btnIniciarSesion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnIniciarSesion.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnIniciarSesion.Depth = 0;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.HighEmphasis = true;
+            this.btnIniciarSesion.Icon = null;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(86, 284);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnIniciarSesion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnIniciarSesion.Size = new System.Drawing.Size(511, 36);
+            this.btnIniciarSesion.TabIndex = 4;
+            this.btnIniciarSesion.Text = "Iniciar sesión";
+            this.btnIniciarSesion.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnIniciarSesion.UseAccentColor = false;
+            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.materialButton1_Click);
             // 
-            // materialButton2
+            // btnOlvidar
             // 
-            this.materialButton2.AutoSize = false;
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(86, 365);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(511, 36);
-            this.materialButton2.TabIndex = 5;
-            this.materialButton2.Text = "Olvide mi contraseña";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
+            this.btnOlvidar.AutoSize = false;
+            this.btnOlvidar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOlvidar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnOlvidar.Depth = 0;
+            this.btnOlvidar.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOlvidar.HighEmphasis = true;
+            this.btnOlvidar.Icon = null;
+            this.btnOlvidar.Location = new System.Drawing.Point(86, 365);
+            this.btnOlvidar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnOlvidar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnOlvidar.Name = "btnOlvidar";
+            this.btnOlvidar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnOlvidar.Size = new System.Drawing.Size(511, 36);
+            this.btnOlvidar.TabIndex = 5;
+            this.btnOlvidar.Text = "Olvide mi contraseña";
+            this.btnOlvidar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnOlvidar.UseAccentColor = false;
+            this.btnOlvidar.UseVisualStyleBackColor = true;
             // 
-            // materialButton3
+            // btnNuevoUser
             // 
-            this.materialButton3.AutoSize = false;
-            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton3.Depth = 0;
-            this.materialButton3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(86, 442);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton3.Name = "materialButton3";
-            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(511, 36);
-            this.materialButton3.TabIndex = 6;
-            this.materialButton3.Text = "Nuevo usuario";
-            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton3.UseAccentColor = false;
-            this.materialButton3.UseVisualStyleBackColor = true;
+            this.btnNuevoUser.AutoSize = false;
+            this.btnNuevoUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNuevoUser.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnNuevoUser.Depth = 0;
+            this.btnNuevoUser.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoUser.HighEmphasis = true;
+            this.btnNuevoUser.Icon = null;
+            this.btnNuevoUser.Location = new System.Drawing.Point(86, 442);
+            this.btnNuevoUser.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNuevoUser.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevoUser.Name = "btnNuevoUser";
+            this.btnNuevoUser.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnNuevoUser.Size = new System.Drawing.Size(511, 36);
+            this.btnNuevoUser.TabIndex = 6;
+            this.btnNuevoUser.Text = "Nuevo usuario";
+            this.btnNuevoUser.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnNuevoUser.UseAccentColor = false;
+            this.btnNuevoUser.UseVisualStyleBackColor = true;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblEstadoDeConexion});
+            this.statusStrip1.Location = new System.Drawing.Point(3, 529);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(692, 22);
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "---";
+            // 
+            // lblEstadoDeConexion
+            // 
+            this.lblEstadoDeConexion.Name = "lblEstadoDeConexion";
+            this.lblEstadoDeConexion.Size = new System.Drawing.Size(22, 17);
+            this.lblEstadoDeConexion.Text = "---";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 554);
-            this.Controls.Add(this.materialButton3);
-            this.Controls.Add(this.materialButton2);
-            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.btnNuevoUser);
+            this.Controls.Add(this.btnOlvidar);
+            this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.materialLabel2);
@@ -177,6 +197,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio De Sesión";
             this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,9 +210,11 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialTextBox txtUser;
         private MaterialSkin.Controls.MaterialTextBox txtPass;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
-        private MaterialSkin.Controls.MaterialButton materialButton3;
+        private MaterialSkin.Controls.MaterialButton btnIniciarSesion;
+        private MaterialSkin.Controls.MaterialButton btnOlvidar;
+        private MaterialSkin.Controls.MaterialButton btnNuevoUser;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblEstadoDeConexion;
     }
 }
 
