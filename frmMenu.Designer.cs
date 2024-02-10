@@ -28,67 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.materialTabControl1.SuspendLayout();
+            this.tblPrincipal = new MaterialSkin.Controls.MaterialTabControl();
+            this.tbpBuscar = new System.Windows.Forms.TabPage();
+            this.tbpCargar = new System.Windows.Forms.TabPage();
+            this.tblPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialTabControl1
+            // tblPrincipal
             // 
-            this.materialTabControl1.Controls.Add(this.tabPage1);
-            this.materialTabControl1.Controls.Add(this.tabPage2);
-            this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialTabControl1.Location = new System.Drawing.Point(3, 64);
-            this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabControl1.Multiline = true;
-            this.materialTabControl1.Name = "materialTabControl1";
-            this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(794, 383);
-            this.materialTabControl1.TabIndex = 0;
+            this.tblPrincipal.Controls.Add(this.tbpBuscar);
+            this.tblPrincipal.Controls.Add(this.tbpCargar);
+            this.tblPrincipal.Depth = 0;
+            this.tblPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblPrincipal.Location = new System.Drawing.Point(3, 64);
+            this.tblPrincipal.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tblPrincipal.Multiline = true;
+            this.tblPrincipal.Name = "tblPrincipal";
+            this.tblPrincipal.SelectedIndex = 0;
+            this.tblPrincipal.Size = new System.Drawing.Size(794, 383);
+            this.tblPrincipal.TabIndex = 0;
             // 
-            // tabPage1
+            // tbpBuscar
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(786, 357);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tbpBuscar.Location = new System.Drawing.Point(4, 22);
+            this.tbpBuscar.Name = "tbpBuscar";
+            this.tbpBuscar.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpBuscar.Size = new System.Drawing.Size(786, 357);
+            this.tbpBuscar.TabIndex = 0;
+            this.tbpBuscar.Text = "Buscar paciente";
+            this.tbpBuscar.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tbpCargar
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(786, 357);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tbpCargar.Location = new System.Drawing.Point(4, 22);
+            this.tbpCargar.Name = "tbpCargar";
+            this.tbpCargar.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCargar.Size = new System.Drawing.Size(786, 357);
+            this.tbpCargar.TabIndex = 1;
+            this.tbpCargar.Text = "Cargar Paciente";
+            this.tbpCargar.UseVisualStyleBackColor = true;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.materialTabControl1);
-            this.DrawerTabControl = this.materialTabControl1;
+            this.Controls.Add(this.tblPrincipal);
+            this.DrawerTabControl = this.tblPrincipal;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenu_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenu_FormClosed);
             this.Load += new System.EventHandler(this.frmMenu_Load);
-            this.materialTabControl1.ResumeLayout(false);
+            this.tblPrincipal.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private MaterialSkin.Controls.MaterialTabControl tblPrincipal;
+        private System.Windows.Forms.TabPage tbpBuscar;
+        private System.Windows.Forms.TabPage tbpCargar;
     }
 }
