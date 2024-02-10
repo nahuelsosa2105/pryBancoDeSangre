@@ -19,7 +19,7 @@ namespace pryBancoDeSangre
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-
+            cmbGrupoSanguineo.ForeColor = Color.White;
         }
 
         private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)

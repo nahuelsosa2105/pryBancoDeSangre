@@ -29,15 +29,19 @@
         private void InitializeComponent()
         {
             this.tblPrincipal = new MaterialSkin.Controls.MaterialTabControl();
-            this.tbpBuscar = new System.Windows.Forms.TabPage();
+            this.tbpBuscarFactor = new System.Windows.Forms.TabPage();
             this.tbpCargar = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cmbGrupoSanguineo = new MaterialSkin.Controls.MaterialComboBox();
             this.tblPrincipal.SuspendLayout();
+            this.tbpBuscarFactor.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblPrincipal
             // 
-            this.tblPrincipal.Controls.Add(this.tbpBuscar);
+            this.tblPrincipal.Controls.Add(this.tbpBuscarFactor);
             this.tblPrincipal.Controls.Add(this.tbpCargar);
+            this.tblPrincipal.Controls.Add(this.tabPage1);
             this.tblPrincipal.Depth = 0;
             this.tblPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPrincipal.Location = new System.Drawing.Point(3, 64);
@@ -48,15 +52,16 @@
             this.tblPrincipal.Size = new System.Drawing.Size(794, 383);
             this.tblPrincipal.TabIndex = 0;
             // 
-            // tbpBuscar
+            // tbpBuscarFactor
             // 
-            this.tbpBuscar.Location = new System.Drawing.Point(4, 22);
-            this.tbpBuscar.Name = "tbpBuscar";
-            this.tbpBuscar.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpBuscar.Size = new System.Drawing.Size(786, 357);
-            this.tbpBuscar.TabIndex = 0;
-            this.tbpBuscar.Text = "Buscar paciente";
-            this.tbpBuscar.UseVisualStyleBackColor = true;
+            this.tbpBuscarFactor.Controls.Add(this.cmbGrupoSanguineo);
+            this.tbpBuscarFactor.Location = new System.Drawing.Point(4, 22);
+            this.tbpBuscarFactor.Name = "tbpBuscarFactor";
+            this.tbpBuscarFactor.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpBuscarFactor.Size = new System.Drawing.Size(786, 357);
+            this.tbpBuscarFactor.TabIndex = 0;
+            this.tbpBuscarFactor.Text = "Buscar Factor Sanguineo";
+            this.tbpBuscarFactor.UseVisualStyleBackColor = true;
             // 
             // tbpCargar
             // 
@@ -67,6 +72,48 @@
             this.tbpCargar.TabIndex = 1;
             this.tbpCargar.Text = "Cargar Paciente";
             this.tbpCargar.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(786, 357);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cmbGrupoSanguineo
+            // 
+            this.cmbGrupoSanguineo.AutoResize = false;
+            this.cmbGrupoSanguineo.BackColor = System.Drawing.Color.White;
+            this.cmbGrupoSanguineo.Depth = 0;
+            this.cmbGrupoSanguineo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cmbGrupoSanguineo.DropDownHeight = 174;
+            this.cmbGrupoSanguineo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGrupoSanguineo.DropDownWidth = 121;
+            this.cmbGrupoSanguineo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbGrupoSanguineo.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbGrupoSanguineo.ForeColor = System.Drawing.Color.White;
+            this.cmbGrupoSanguineo.FormattingEnabled = true;
+            this.cmbGrupoSanguineo.IntegralHeight = false;
+            this.cmbGrupoSanguineo.ItemHeight = 43;
+            this.cmbGrupoSanguineo.Items.AddRange(new object[] {
+            "A+ (grupo sanguíneo A con factor Rh positivo).",
+            "B+ (grupo sanguíneo B con factor Rh positivo).",
+            "AB+ (grupo sanguíneo AB con factor Rh positivo).",
+            "0+ (grupo sanguíneo 0 con factor Rh positivo).",
+            "A- (grupo sanguíneo A con factor Rh negativo).",
+            "B- (grupo sanguíneo B con factor Rh negativo).",
+            "AB- (grupo sanguíneo AB con factor Rh negativo).",
+            "0- (grupo sanguíneo 0 con factor Rh negativo)."});
+            this.cmbGrupoSanguineo.Location = new System.Drawing.Point(110, 49);
+            this.cmbGrupoSanguineo.MaxDropDownItems = 4;
+            this.cmbGrupoSanguineo.MouseState = MaterialSkin.MouseState.OUT;
+            this.cmbGrupoSanguineo.Name = "cmbGrupoSanguineo";
+            this.cmbGrupoSanguineo.Size = new System.Drawing.Size(559, 49);
+            this.cmbGrupoSanguineo.StartIndex = 0;
+            this.cmbGrupoSanguineo.TabIndex = 0;
             // 
             // frmMenu
             // 
@@ -82,6 +129,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenu_FormClosed);
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.tblPrincipal.ResumeLayout(false);
+            this.tbpBuscarFactor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -89,7 +137,9 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialTabControl tblPrincipal;
-        private System.Windows.Forms.TabPage tbpBuscar;
+        private System.Windows.Forms.TabPage tbpBuscarFactor;
         private System.Windows.Forms.TabPage tbpCargar;
+        private System.Windows.Forms.TabPage tabPage1;
+        private MaterialSkin.Controls.MaterialComboBox cmbGrupoSanguineo;
     }
 }
