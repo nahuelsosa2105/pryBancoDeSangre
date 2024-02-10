@@ -35,8 +35,25 @@ namespace pryBancoDeSangre
             user = txtUser.Text;
             pass = txtPass.Text;
 
-            clsBaseDeDatosUser
+            clsBaseDeDatosUser login = new clsBaseDeDatosUser();
+            login.BuscarUser();
 
+            if(clsBaseDeDatosUser.respuesta == true)
+            {
+                this.Hide();
+                frmMenu frmMenu = new frmMenu();
+                frmMenu.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o Contraeña incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

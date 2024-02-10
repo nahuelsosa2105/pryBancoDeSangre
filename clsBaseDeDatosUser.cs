@@ -37,8 +37,10 @@ namespace pryBancoDeSangre
                 estadoConexion = "Estado de conexion: Incorrecto" + ex.Message;
             }
         }
-        
-           
+
+        public static bool respuesta;
+
+
         public void BuscarUser()
         {
             conexionBd = new OleDbConnection();
@@ -49,6 +51,29 @@ namespace pryBancoDeSangre
             comandoBd.Connection = conexionBd;
             comandoBd.CommandType = System.Data.CommandType.TableDirect;
             comandoBd.CommandText = "users";
+
+            lectorBd = comandoBd.ExecuteReader();
+
+            if(lectorBd.HasRows)
+            {
+                while(lectorBd.Read())
+                {
+                    string userBd = lectorBd[1].ToString();
+                    string passBd = lectorBd[2].ToString();
+
+                    if (userBd == frmLogin.user && passBd == frmLogin.pass)
+                    {
+                        respuesta = true;
+                        break;
+                    }
+                    else
+                    {
+                        respuesta = false;
+                        break;
+                    }
+
+                }
+            }
         }
 
     }
