@@ -12,6 +12,7 @@ namespace pryBancoDeSangre
 {
     public partial class frmMenu : MaterialSkin.Controls.MaterialForm
     {
+        clsBaseDeDatosPaciente objBaseDeDatosPaciente;
         public frmMenu()
         {
             InitializeComponent();
@@ -20,6 +21,9 @@ namespace pryBancoDeSangre
         private void frmMenu_Load(object sender, EventArgs e)
         {
             cmbGrupoSanguineo.ForeColor = Color.White;
+            objBaseDeDatosPaciente = new clsBaseDeDatosPaciente();
+            objBaseDeDatosPaciente.ConectarBD();
+
         }
 
         private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)
@@ -30,6 +34,16 @@ namespace pryBancoDeSangre
         private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+        public static string grupoSanguineo;
+
+        private void btnBuscarGrupo_Click(object sender, EventArgs e)
+        {
+        //    grupoSanguineo = cmbGrupoSanguineo.ToString();
+        //    clsBaseDeDatosPaciente buscarGrupo = new clsBaseDeDatosPaciente();
+        //    buscarGrupo.BuscarGrupo();
+
+
         }
     }
 }
