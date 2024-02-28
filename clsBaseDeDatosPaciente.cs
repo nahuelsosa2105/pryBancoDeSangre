@@ -15,7 +15,7 @@ namespace pryBancoDeSangre
         OleDbCommand comandoBd;
         OleDbDataReader lectorBd;
 
-        string cadenaConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\bdBancoDeSangre.accdb";
+        string cadenaConexion = @"Provider = Microsoft.ACE.OLEDB.12.0;" + " Data Source = ..\\..\\Resources\\bdBancoDeSangre";
 
         public string estadoConexion = "";
 
