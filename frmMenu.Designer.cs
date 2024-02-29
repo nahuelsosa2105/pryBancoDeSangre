@@ -257,6 +257,7 @@
             this.cmbGrupoSanguineo.Size = new System.Drawing.Size(780, 49);
             this.cmbGrupoSanguineo.StartIndex = 0;
             this.cmbGrupoSanguineo.TabIndex = 0;
+            this.cmbGrupoSanguineo.SelectedIndexChanged += new System.EventHandler(this.cmbGrupoSanguineo_SelectedIndexChanged);
             // 
             // tbpCargar
             // 

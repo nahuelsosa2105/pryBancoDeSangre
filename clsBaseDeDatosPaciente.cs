@@ -36,35 +36,38 @@ namespace pryBancoDeSangre
             {
                 MessageBox.Show("Estado de conexion: Incorrecto" + ex.Message);
             }
+            conexionBd.Close();
         }
 
-        //public void BuscarGrupo()
-        //{
-        //    conexionBd = new OleDbConnection();
-        //    conexionBd.ConnectionString = cadenaConexion;
-        //    conexionBd.Open();
-        //    comandoBd = new OleDbCommand();
+        public void BuscarGrupo()
+        {
+            conexionBd = new OleDbConnection();
+            conexionBd.ConnectionString = cadenaConexion;
+            conexionBd.Open();
+            comandoBd = new OleDbCommand();
 
-        //    comandoBd.Connection = conexionBd;
-        //    comandoBd.CommandType = System.Data.CommandType.TableDirect;
-        //    comandoBd.CommandText = "Grupo Sanguineo";
+            comandoBd.Connection = conexionBd;
+            comandoBd.CommandType = System.Data.CommandType.TableDirect;
+            comandoBd.CommandText = "Grupo Sanguineo";
 
-        //    lectorBd = comandoBd.ExecuteReader();
+            lectorBd = comandoBd.ExecuteReader();
 
-        //    if(lectorBd.HasRows)
-        //    {
-        //        foreach (DataRow fila in lectorBd.HasRows)
-        //        {
-        //            // Crear una nueva fila en la grilla
-        //            int indiceFila = dataGridView1.Rows.Add();
+            if (lectorBd.HasRows)
+            {
+                foreach (DataRow fila in lectorBd.HasRows)
+                {
+                    // Crear una nueva fila en la grilla
+                    int indiceFila = dataGridView1.Rows.Add();
 
-        //            // Iterar sobre las columnas y asignar los valores a la nueva fila de la grilla
-        //            foreach (DataColumn columna in dataTable.Columns)
-        //            {
-        //                dataGridView1.Rows[indiceFila].Cells[columna.ColumnName].Value = fila[columna];
-        //            }
-        //        }
-        //    }
-        //}
+                    // Iterar sobre las columnas y asignar los valores a la nueva fila de la grilla
+                    foreach (DataColumn columna in dataTable.Columns)
+                    {
+                        dataGridView1.Rows[indiceFila].Cells[columna.ColumnName].Value = fila[columna];
+                    }
+                }
+            }
+
+            conexionBd.Close();
+        }
     }
 }
