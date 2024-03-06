@@ -39,9 +39,9 @@ namespace pryBancoDeSangre
 
         private void btnBuscarGrupo_Click(object sender, EventArgs e)
         {
-            grupoSanguineo = cmbGrupoSanguineo.ToString();
+            grupoSanguineo = cmbGrupoSanguineo.SelectedItem.ToString();
             clsBaseDeDatosPaciente buscarGrupo = new clsBaseDeDatosPaciente();
-            buscarGrupo.BuscarGrupo();
+            buscarGrupo.BuscarGrupo(dgvGrupoSanguineo);
 
 
         }
